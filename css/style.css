@@ -1,0 +1,249 @@
+/* CSS */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav>a {
+    border: 1px solid;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.home-icon {
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.bali-img {
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-header {
+    text-align: center;
+}
+
+/* CSS testimoni */
+/* Section Testimoni */
+#testimoni-section {
+    padding: 10px;
+    background-color: #f4a8a8;
+    text-align: center;
+}
+
+/* Header Testimoni */
+.content-header.testimoni {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+/* Container Testimoni */
+.testimoni-container {
+    align-items: center; 
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+/* Gaya untuk Bagian Gambar dan Profil */
+.testimoni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* CSS MAIN CONTAINER */ 
+.main-container {
+    display: flex;
+    gap: 24px;
+}
+
+.main-item {
+    flex: 1;
+}
+
+form {
+    background-color: aliceblue;
+}
+
+
+.our-packages-header {
+    background-color: aliceblue;
+    margin-top: 24px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+footer {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.main-item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.main-item h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.main-item p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.main-item input,
+.main-item textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%; /* Lebar penuh */
+    padding: 10px 15px;/* Spasi dalam */
+    border: 1px solid #ddd; /* Garis tepi */
+    border-radius: 4px; /* Sudut melengkung */
+    background-color: #f9f9f9; /* Warna latar */
+    font-size: 1em; /* Ukuran font */
+}
+
+.main-item button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.main-item button:hover {
+    background-color: #0056b3;
+}
+
+/* CSS PACKAGE  */
+#our-package-section {
+    padding: 20px 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.our-packages-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* General Section Styling */
+#our-package-section {
+    padding: 20px 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.our-packages-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Package Container */
+.package-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom jika ingin sejajar dua kolom */
+    gap: 20px;
+    justify-content: center;
+}
+
+.package-item {
+    display: flex; /* Membuat gambar dan teks sejajar horizontal */
+    align-items: center; /* Menengahkan vertikal gambar dan teks */
+    padding: 15px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.icon {
+    flex: 0 0 100px; /* Ukuran gambar tetap */
+    margin-right: 15px; /* Jarak antara gambar dan teks */
+}
+
+.icon img {
+    width: 100px; /* Atur ukuran gambar */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.package-text h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+    text-align: left;
+}
+
+.package-text p {
+    font-size: 1rem;
+    color: #666;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .package-container {
+        grid-template-columns: 1fr; /* Menjadi satu kolom di layar kecil */
+    }
+    .package-item {
+        flex-direction: column; /* Gambar di atas teks di layar kecil */
+        text-align: center;
+    }
+    .icon {
+        margin: 0 0 10px 0; /* Jarak antara gambar dan teks saat vertikal */
+    }
+}
+
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    .testimoni-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
