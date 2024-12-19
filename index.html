@@ -10,11 +10,11 @@
 
 <body>
     <header class="main-header">
-            <img class="home-icon" src="img/bali.jpg" alt="Beautiful Bali" class="bali-img">
+            <img class="home-icon" src="img/logo web.png" alt="Logo web">
         <nav>
             <a href="#home-section">Home</a>
             <a href="#our-package-section">Our Packages</a>
-            <a href="#our-package-section">Call Us</a>
+            <a href="#call-us-section">Call Us</a>
         </nav>
     </header>
 
@@ -26,52 +26,63 @@
             <h3>Your Happiness is Our Happiness</h3>
         </header>
 
-        <section class="main-container" id="home-section">
+        <section class="main-container-home" id="home-section">
             <!-- Banner AutoSlide Content -->
-            <aside class="main-item">
-                <img src="img/bali.jpg" alt="Beautiful Bali" class="bali-img">
+            <aside class="main-item banner">
+                <div class="banner-img">
+                    <div class="banner-slide">
+                        <img src="img/bali.jpg" alt="Beautiful Bali">
+                    </div>
+                    <div class="banner-slide">
+                        <img src="img/jepang.jpg" alt="Beautiful Japan">
+                    </div>
+                    <div class="banner-slide">
+                        <img src="img/singapura.jpg" alt="Beautiful Singapore">
+                    </div>
+                </div>
             </aside>
-        
+
             <!-- Form Contact Us -->
             <form class="main-item" action="submit.php" method="POST">
                 <header class="content-header">
                     <h1>Contact Us</h1>
                     <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
                 </header>
-                
+        
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        
+                
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        
+                
                 <label for="location">What are you interested in?</label>
-                <select id="location" name="location" required>
-                    <option value="" disabled selected>Choose a location</option>
-                    <option value="bali">Bali</option>
-                    <option value="japan">Japan</option>
-                    <option value="singapore">Singapore</option>
-                    <option value="bandung">Bandung</option>
-                    <option value="surabaya">Surabaya</option>
-                </select>
-
+                    <select id="location" name="location" required>
+                        <option value="" disabled selected>Choose a location</option>
+                        <option value="bali">Bali</option>
+                        <option value="japan">Japan</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="surabaya">Surabaya</option>
+                    </select>
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </section>
         
         <!-- TESTIMONI -->
         <section id="testimoni-section">
-            <header class="content-header testimoni">
+            <div class="testimoni-text">
                 <h1>Testimoni</h1>
+            </div>
+            <header class="content-header testimoni">
                 <div class="testimoni-container">
                     <div class="testimoni">
                         <img src="img/profil.jpg" alt="Jane Doe" class="profile-img">
-                        <strong>Jane Doe</strong>
-                        <span class="location">Bali, Indonesia</span>
-                        <p>"Bali is a paradise on earth! The beaches and sunsets are absolutely stunning."</p>
+                        <strong>Rose</strong>
+                        <span class="pekerjaan">Ibu Rumahtangga, 28</span>
+                        <p>"Liburan menjadi menyenangkan bersama mytravel"</p>
                     </div>
-                </div>
             </header>
+
             <article class="content"></article>
         </section>
         
@@ -82,16 +93,6 @@
             </header>
 
             <div class="package-container">
-                <!-- Jakarta -->
-                <div class="package-item">
-                    <div class="icon">
-                        <img src="img/bali.jpg" alt="Jakarta Icon">
-                    </div>
-                    <div class="package-text">
-                        <h2>Jakarta</h2>
-                        <p>Jelajahi pesona Jakarta, dari gedung pencakar langit yang megah hingga warisan budaya yang memikat.</p>
-                    </div>
-                </div>
 
                 <!-- Bali -->
                 <div class="package-item">
@@ -100,14 +101,47 @@
                     </div>
                     <div class="package-text">
                         <h2>Bali</h2>
-                        <p>Temukan surga di Bali, dari pantai eksotis hingga tradisi yang memukau.</p>
+                        <p>Jelajahi keindahan Bali mulai dari pantai-pantai eksotis hingga tradisi budaya yang menenangkan jiwa.</p>
+                    </div>
+                </div>
+
+                <!-- Jepang -->
+                <div class="package-item">
+                    <div class="icon">
+                        <img src="img/jepang.jpg" alt="Jepang Icon">
+                    </div>
+                    <div class="package-text">
+                        <h2>Japan</h2>
+                        <p>Rasakan pesona Japang, dengan keindahan bunga sakura yang memikat hati.</p>
+                    </div>
+                </div>
+
+                <!-- Singapura -->
+                <div class="package-item">
+                    <div class="icon">
+                        <img src="img/singapura.jpg" alt="Singapura Icon">
+                    </div>
+                    <div class="package-text">
+                        <h2>Singapore</h2>
+                        <p>Temukan keunikan Singapura, tempat di mana tradisi bertemu dengan modernitas melalui kuliner, belanja, dan hiburan kelas dunia.</p>
+                    </div>
+                </div>
+
+                 <!-- Bandung -->
+                 <div class="package-item">
+                    <div class="icon">
+                        <img src="img/bandung.jpg" alt="Bandung Icon">
+                    </div>
+                    <div class="package-text">
+                        <h2>Bandung</h2>
+                        <p>Nikmati udara segar Bandung sambil menjelajahi surga belanja, hidangan khas, dan pemandangan alam yang indah.</p>
                     </div>
                 </div>
 
                 <!-- Surabaya -->
                 <div class="package-item">
                     <div class="icon">
-                        <img src="img/bali.jpg" alt="Surabaya Icon">
+                        <img src="img/surabaya.jpeg" alt="Surabaya Icon">
                     </div>
                     <div class="package-text">
                         <h2>Surabaya</h2>
@@ -115,47 +149,27 @@
                     </div>
                 </div>
 
-                <!-- Tokyo -->
+                <!-- Paris -->
                 <div class="package-item">
                     <div class="icon">
-                        <img src="img/bali.jpg" alt="Tokyo Icon">
+                        <img src="img/paris.jpg" alt="Paris Icon">
                     </div>
                     <div class="package-text">
-                        <h2>Tokyo</h2>
-                        <p>Travel dan wisata di Tokyo, kunjungi cagar budaya dan kuliner yang menarik.</p>
-                    </div>
-                </div>
-
-                <!-- Como -->
-                <div class="package-item">
-                    <div class="icon">
-                        <img src="img/bali.jpg" alt="Como Icon">
-                    </div>
-                    <div class="package-text">
-                        <h2>Como</h2>
-                        <p>Travel dan wisata di Como, kunjungi cagar budaya dan kuliner yang menarik.</p>
-                    </div>
-                </div>
-
-                <!-- Jeju -->
-                <div class="package-item">
-                    <div class="icon">
-                        <img src="img/bali.jpg" alt="Jeju Icon">
-                    </div>
-                    <div class="package-text">
-                        <h2>Jeju</h2>
-                        <p>Travel dan wisata di Jeju, kunjungi cagar budaya dan kuliner yang menarik.</p>
+                        <h2>Paris</h2>
+                        <p>Jelajahi romantisme Paris, kota yang memadukan keindahan seni dengan pesona Menara Eiffel yang ikonis.</p>
                     </div>
                 </div>
             </div>
         </section>
 
 
-        <!-- Our Packages Content -->
+        <!-- Call Us Content -->
         <section id="call-us-section">
-            <header class="content-header our-packages-header">
-                <h1>Our Packages</h1>
-            </header>
+            <header class="content-header call-us-header">
+                <h1>Hubungi Kami</h1>
+                <p>Jika Anda membutuhkan bantuan segera, silakan hubungi kami melalui telepon atau email. Kami siap membantu!</p>
+                <a class="btn-call">Hubungi Kami Sekarang</a>
+            </div>
 
             <article class="content"></article>
         </section>
@@ -164,6 +178,8 @@
     <footer>
         <span>Made by Eliyamaulidda@2024</span>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

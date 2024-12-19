@@ -1,7 +1,10 @@
-/* CSS */
+/* CSS Header*/
 .main-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
 }
 
 nav {
@@ -10,39 +13,149 @@ nav {
 }
 
 nav>a {
-    border: 1px solid;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
     padding-right: 16px;
     text-decoration: none;
-    color: black;
+    background-color: #f5f7f8; 
+    border: solid;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
+
+nav a:hover {
+    background-color: #52a9ec;  /* untuk Ubah warna saat hover */
+}
+
 
 .home-icon {
     height: 50px;
     width: 50px;
     background-size: cover;
     background-position: center;
-    border-radius: 50%;
+    border-radius: 50%; 
 }
 
-.bali-img {
-    height: 320px;
-    background-size: cover;
-    background-position: center;
+/* CSS content Header home mulai dari auto slide dan form*/
+
+.main-container-home {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Kolom pertama 2x lebih besar dari kolom kedua */
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-item {
+    flex: 1;
+    background-color: #D4EBF8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+}
+
+.main-item h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.main-item p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+.banner-slide {
+    min-width: 100%;
+    height: 100%;
+    display: none;  /* Sembunyikan semua gambar kecuali yang aktif */
+}
+
+.banner-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Menampilkan gambar pertama */
+.banner-slide:first-child {
+    display: block;
 }
 
 .content-header {
     text-align: center;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.content-header h1 {
+    font-size: 2rem;
+    color: #0A3981;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: rgb(97, 155, 206);
+    height: 90%; 
+    padding: 20px;
+}
+/* CSS INPUT FORM */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    font-style: italic;
+    color: #aaa;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #0A3981;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+banner-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
 }
 
 /* CSS testimoni */
 /* Section Testimoni */
 #testimoni-section {
+    margin-top: 10px;
     padding: 10px;
-    background-color: #f4a8a8;
+    background-color: #E38E49;
     text-align: center;
+}
+
+.testimoni-text{
+    font-size: 1.5rem;
+    color: #333;
 }
 
 /* Header Testimoni */
@@ -62,7 +175,7 @@ nav>a {
     margin-top: 20px;
 }
 
-/* Gaya untuk Bagian Gambar dan Profil */
+/* css Profil testimoni */
 .testimoni {
     display: flex;
     flex-direction: column;
@@ -78,172 +191,159 @@ nav>a {
     margin-bottom: 10px;
 }
 
-/* CSS MAIN CONTAINER */ 
-.main-container {
-    display: flex;
-    gap: 24px;
-}
 
-.main-item {
-    flex: 1;
-}
+/* CSS Our Packages Content */
+#our-package-section {
+    background-color: #f9f9f9;
+    text-align: center;
 
-form {
-    background-color: aliceblue;
 }
-
 
 .our-packages-header {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     margin-top: 24px;
     padding-top: 64px;
     padding-bottom: 64px;
 }
 
-footer {
-    margin-top: 24px;
-    text-align: center;
-}
-
-.main-item {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-}
-
-.main-item h1 {
-    text-align: center;
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.main-item p {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.main-item input,
-.main-item textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-select {
-    width: 100%; /* Lebar penuh */
-    padding: 10px 15px;/* Spasi dalam */
-    border: 1px solid #ddd; /* Garis tepi */
-    border-radius: 4px; /* Sudut melengkung */
-    background-color: #f9f9f9; /* Warna latar */
-    font-size: 1em; /* Ukuran font */
-}
-
-.main-item button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.main-item button:hover {
-    background-color: #0056b3;
-}
-
-/* CSS PACKAGE  */
-#our-package-section {
-    padding: 20px 40px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
 .our-packages-header h1 {
     font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* General Section Styling */
-#our-package-section {
-    padding: 20px 40px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.our-packages-header h1 {
-    font-size: 2rem;
-    color: #333;
+    color: #0A3981;
     margin-bottom: 20px;
 }
 
 /* Package Container */
 .package-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dua kolom jika ingin sejajar dua kolom */
+    grid-template-columns: 1fr 1fr 1fr; /* membuat 3 kolom sejajar */
     gap: 20px;
     justify-content: center;
 }
 
 .package-item {
-    display: flex; /* Membuat gambar dan teks sejajar horizontal */
-    align-items: center; /* Menengahkan vertikal gambar dan teks */
+    display: flex; 
+    flex: 1;
+    align-items: center;
     padding: 15px;
     background-color: #fff;
     transition: box-shadow 0.3s ease;
 }
 
 .icon {
-    flex: 0 0 100px; /* Ukuran gambar tetap */
-    margin-right: 15px; /* Jarak antara gambar dan teks */
+    flex: 0 0 100px; 
+    margin-right: 15px; 
+    margin-bottom: 5px;
 }
 
 .icon img {
-    width: 100px; /* Atur ukuran gambar */
+    width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .package-text h2 {
-    font-size: 1.2rem;
-    margin: 0 0 10px;
-    color: #333;
     text-align: left;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .package-text p {
+    margin-top: 5px; 
+    line-height: 1.5; 
     font-size: 1rem;
     color: #666;
     text-align: left;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .package-container {
-        grid-template-columns: 1fr; /* Menjadi satu kolom di layar kecil */
-    }
-    .package-item {
-        flex-direction: column; /* Gambar di atas teks di layar kecil */
-        text-align: center;
-    }
-    .icon {
-        margin: 0 0 10px 0; /* Jarak antara gambar dan teks saat vertikal */
-    }
+/* CSS Call us */
+#call-us-section {
+    padding: 20px;
+    background-color: #E38E49;
+    border-top: 2px solid #ccc;
+}
+
+.call-us-header h1 {
+    font-size: 2rem;
+    color: #130202;
+    margin-bottom: 10px;
+}
+
+.contact-details p{
+    font-size: 1.2rem;
+    color: #f8f6f6;
+}
+
+a {
+    color: #031b34;
+    text-decoration: none;
+}
+
+.btn-call {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #041d35;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn-call:hover {
+    background-color: #0c457d;
+}
+
+/* CSS Footer */
+footer {
+    margin-top: 24px;
+    text-align: center;
 }
 
 
-/* Responsif untuk perangkat kecil */
-@media (max-width: 768px) {
+/* Responsif untuk perangkat kecil hp */
+@media (max-width: 480px) {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home-icon {
+        width: 100px; 
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    nav {
+        width: 100%; 
+    }
+    nav a {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .main-container-home {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    form {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
     .testimoni-container {
         flex-direction: column;
         align-items: center;
+    }
+    .package-container {
+        grid-template-columns: 1fr; 
+    }
+    .package-item {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .icon {
+        margin: 0 0 10px 0; 
     }
 
 }
