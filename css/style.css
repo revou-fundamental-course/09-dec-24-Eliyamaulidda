@@ -128,21 +128,22 @@ select {
     color: #aaa;
 }
 
-.submit-btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    color: white;
-    background-color: #0A3981;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+#submit-btn {
+    background-color: #0A3981; /* Warna biru */
+    color: #ffffff; /* Warna teks putih */
+    padding: 10px 20px; /* Padding tombol */
+    border: none; /* Hilangkan border */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    font-size: 16px; /* Ukuran font */
+    font-weight: bold; /* Tebalkan teks */
+    cursor: pointer; /* Ubah kursor saat hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efek transisi */
 }
 
-.submit-btn:hover {
-    background-color: #0056b3;
+#submit-btn:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap saat hover */
 }
+
 
 
 banner-slide img {
@@ -153,7 +154,7 @@ banner-slide img {
 
 /* CSS Why choose us */
 .why-choose-us-section {
-    padding: 20px;
+    padding: 50px 20px;
     background-color: #f9f9f9;
     text-align: center;
     margin-bottom: 20px;
@@ -242,9 +243,9 @@ banner-slide img {
 
 .our-packages-header {
     background-color: rgb(255, 255, 255);
-    margin-top: 24px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .our-packages-header h1 {
@@ -378,6 +379,7 @@ footer {
     .package-item {
         flex-direction: column; 
         text-align: center;
+        margin-bottom: 10px;
     }
     .icon {
         margin: 0 0 10px 0; 

@@ -1,46 +1,47 @@
-// Ini Javascript
-console.log('Javascript berhasil tersambung');
+console.log('JavaScript berhasil tersambung');
 
-let indexSlide = 0;
+        // Slider Functionality
+        let indexSlide = 0;
 
-nextSlide();
+        function nextSlide() {
+            showBanner(indexSlide += 1); 
+        }
 
-// Fungsi untuk memvalidasi
-function validateForm() {
-    const usernameInput = document.getElementById('username-input').value;
-    console.log(usernameInput);
+        function showBanner(n) {
+            const imageList = document.getElementsByClassName('banner-slide'); 
 
-    // Validasi jika nama user tidak kosong
-    if (usernameInput == '') {
-        alert('Inputan tidak boleh kosong');
-    } else {
-        document.getElementById('username-result').innerHTML = usernameInput;
-    }
+            if (n > imageList.length - 1) indexSlide = 0; 
 
-    console.log('validateForm executed');
-}
+            for (let i = 0; i < imageList.length; i++) {
+                imageList[i].style.display = "none";
+            }
 
-function nextSlide() {
-    showBanner(indexSlide += 1);
-}
+            imageList[indexSlide].style.display = "block";
+        }
 
-function showBanner(n) {
-    const imageList = document.getElementsByClassName('banner-img');
+        setInterval(nextSlide, 3000);
 
-    console.log(imageList);
-    console.log(imageList.length);
-    console.log(n);
-    if (n > imageList.length - 1) indexSlide = 0;
+        // Form Validation
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const location = document.getElementById('location').value;
 
+            if (name === '') {
+                alert('Nama tidak boleh kosong');
+                return;
+            }
 
-    // Hide semua banner
-    for (let i = 0; i < imageList.length; i++) {
-        imageList[i].style.display = "none";
-    }
+            if (email === '') {
+                alert('Email tidak boleh kosong');
+                return;
+            }
 
-    // Show 1 Banner sesuai Posisi yang diinginkan
-    imageList[indexSlide].style.display = "block";
-}
+            if (location === '') {
+                alert('Harap pilih lokasi');
+                return;
+            }
 
-// Automate banned slide
-setInterval(nextSlide, 3000);
+            alert(`Terima kasih, ${name}! Data Anda telah disubmit.`);
+            document.getElementById('contact-form').reset();
+        }
